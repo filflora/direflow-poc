@@ -25,7 +25,9 @@ const App: FC<IProps> = (props) => {
   return (
     <Styled styles={styles}>
       <div className='app'>
-        Hello world of Direflow! <br/> This is a number to be changed from parent: {props.limit}.
+        Hello world of Direflow!
+        <br/>
+        This is a number to be changed from parent: {props.limit}.
         <br/>
         <button className='button' onClick={handleClick}>
           Say hello to {props?.user?.name}

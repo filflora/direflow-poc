@@ -1,7 +1,7 @@
 import { DireflowComponent } from 'direflow-component';
 import App from './direflow-component/App';
 
-const direflowComponent = new DireflowComponent({ shadow: false });
+const direflowComponent = new DireflowComponent();
 
 // direflowComponent.setProperties({
 //   componentTitle: 'Direflow Test',
@@ -19,4 +19,4 @@ direflowComponent.setProperties({
   },
 });
 
-direflowComponent.render(App, 'direflow-test');
+direflowComponent.render(App, 'direflow-poc');

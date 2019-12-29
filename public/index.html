@@ -8,13 +8,13 @@
     <title>Direflow Test</title>
   </head>
   <body>
-    <direflow-test limit="5"></direflow-test>
+    <direflow-poc limit="5"></direflow-poc>
 
     <button onclick="onButtonClick()">Change attributes</button>
 
     <script>
 
-      const component = document.querySelector('direflow-test');
+      const component = document.querySelector('direflow-poc');
       component.addEventListener('my-event', (message) => {
         // handle event
         console.log('Web component message: ', message.detail)
@@ -23,9 +23,9 @@
 
       function onButtonClick() {
         debugger;
-        component.setAttribute('limit', 998);
-        component.setAttribute('user', { name: 'John' });
-        // component.limit = 999;
+        // component.setAttribute('limit', 998);
+        // component.setAttribute('user', { name: 'John' });
+        component.limit = 999;
         // component.user = { name: 'John' };
       }
 

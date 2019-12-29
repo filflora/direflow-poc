@@ -11,14 +11,14 @@
 <div>
     <h1>Before title</h1>
     <div>
-        <direflow-test limit="3"></direflow-test>
+        <direflow-poc limit="3"></direflow-poc>
     </div>
     <h2>After title</h2>
     <button onclick="onButtonClick()">Change attributes</button>
 
     <script>
 
-        const component = document.querySelector('direflow-test');
+        const component = document.querySelector('direflow-poc');
         component.addEventListener('my-event', (message) => {
             // handle event
             console.log('Web component message: ', message.detail)
