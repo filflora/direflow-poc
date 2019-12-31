@@ -1,22 +1,20 @@
 import { DireflowComponent } from 'direflow-component';
-import App from './direflow-component/App';
+import HelloWorld from './components/hello-world/hello-world';
+import HelloEvent from './components/hello-event/hello-event';
+import HelloPrimitiveProperty from './components/hello-primitive-property/hello-primitive-property';
 
-const direflowComponent = new DireflowComponent();
+// register components
+const helloWorldComponent = new DireflowComponent();
+helloWorldComponent.render(HelloWorld, 'hello-world');
 
-// direflowComponent.setProperties({
-//   componentTitle: 'Direflow Test',
-//   sampleList: [
-//     'Create with React',
-//     'Build as Web Component',
-//     'Use it anywhere!',
-//   ],
-// });
+const helloEventComponent = new DireflowComponent();
+helloEventComponent.render(HelloEvent, 'hello-event');
 
-direflowComponent.setProperties({
-  limit: 1,
-  user: {
-    name: 'Initial name',
-  },
+const helloPrimitiveProperty = new DireflowComponent();
+helloPrimitiveProperty.setProperties({
+    userName: 'John Doe',
+    age: 30,
+    isMarried: false
 });
+helloPrimitiveProperty.render(HelloPrimitiveProperty, 'hello-primitive-property');
 
-direflowComponent.render(App, 'direflow-poc');

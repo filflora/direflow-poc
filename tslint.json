@@ -1,11 +1,12 @@
 {
   "rules": {
     "max-line-length": { "options": [120], "severity": "warning" },
-    "no-lowlevel-commenting": { "severity": "warning" },
+    "no-lowlevel-commenting": false,
     "discreet-ternary": { "severity": "warning" },
     "curly": { "severity": "warning" },
     "jsx-wrap-multiline": false,
-    "typedef": false
+    "typedef": false,
+    "ter-indent": ["spaces", 4]
   },
   "linterOptions": {
     "exclude": [

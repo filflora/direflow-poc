@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Direflow Test</title>
-  </head>
-  <body>
-    <direflow-poc></direflow-poc>
+</head>
+<body>
+
+    <h3>A simple "hello world"</h3>
+    <hello-world></hello-world>
+
+    <h3>Component with a custom event</h3>
+    <hello-event></hello-event>
+
+    <h3>A component with default properties:</h3>
+    <hello-primitive-property></hello-primitive-property>
+
+    <h3>A component with properties set</h3>
+    <hello-primitive-property userName="Rock Lee" age="16" isMarried="false" id="change-this"></hello-primitive-property>
 
     <button onclick="onButtonClick()">Change attributes</button>
 
     <script>
 
-      const component = document.querySelector('direflow-poc');
-      component.addEventListener('my-event', (message) => {
-        // handle event
-        console.log('Web component message: ', message.detail)
-      });
+        const component = document.querySelector('hello-event');
+        component.addEventListener('my-event', (message) => {
+            console.log('A message from the hello-event component: ', message.detail)
+        });
 
-
-      function onButtonClick() {
-        debugger;
-        // component.setAttribute('limit', 998);
-        // component.setAttribute('user', { name: 'John' });
-        component.limit = 999;
-        // component.user = { name: 'John' };
-      }
+        function onButtonClick() {
+            const component = document.getElementById('change-this');
+            component.isMarried = 'true';
+        }
 
     </script>
 
-  </body>
+</body>
 </html>

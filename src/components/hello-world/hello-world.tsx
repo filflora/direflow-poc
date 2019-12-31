@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react';
 import { EventContext, Styled } from 'direflow-component';
-import styles from './App.css';
+import styles from './hello-world.css';
 
 
 interface IUser {
@@ -12,15 +12,13 @@ interface IProps {
   user: IUser;
 }
 
-const App: FC<IProps> = (props) => {
+const HelloWorld: FC<IProps> = (props) => {
   const dispatch = useContext(EventContext);
 
   const handleClick = () => {
     const event = new CustomEvent('my-event', { detail: 123 });
     dispatch(event);
   };
-
-  console.log('props: ', props);
 
   return (
     <Styled styles={styles}>
@@ -37,4 +35,4 @@ const App: FC<IProps> = (props) => {
   );
 };
 
-export default App;
+export default HelloWorld;
