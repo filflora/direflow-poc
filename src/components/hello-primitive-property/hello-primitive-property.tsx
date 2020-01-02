@@ -10,6 +10,8 @@ interface IProps {
 
 const HelloPrimitiveProperty: FC<IProps> = (props) => {
 
+  console.log('Primitive property rerender', props);
+
   return (
     <Styled styles={styles}>
       <div className='app'>
@@ -21,7 +23,7 @@ const HelloPrimitiveProperty: FC<IProps> = (props) => {
         <ul>
           <li><b>Name:</b> {props.userName}</li>
           <li><b>Age:</b> {props.age}</li>
-          <li><b>Married:</b> {props.isMarried ? 'yes' : 'no'}</li>
+          <li><b>Married:</b> {String(props.isMarried)}</li>
         </ul>
       </div>
     </Styled>
